@@ -44,8 +44,7 @@ export async function handleRefresh() {
 }
 
 export async function handleLogin(userId: string, accessToken: string, refreshToken: string) {
-    const cookieStore: any = await cookies(); // Await the cookies() function
-    cookieStore().set('session_userid', userId, {
+    cookies().set('session_userid', userId, {
         httpOnly: true,
         secure: false,
         maxAge: 60 * 60 * 24 * 7, // One week

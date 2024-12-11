@@ -119,12 +119,11 @@ const PropertyList: React.FC<PropertyListProps> = ({
     // };
 
     const getProperties = async () => {
-
         try {
-
-            const res = await fetch('http://localhost:8000/api/properties/', { method: 'Get' })
-            const resData = await res.json();
-            setProperties(resData.data)
+            const res = await apiService.get('/api/properties/')
+            // debugger
+            // const resData = await res.json();
+            setProperties(res.data)
         } catch (error) {
           console.log('error', error)
         }

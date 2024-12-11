@@ -2,15 +2,15 @@
 
 import { useRouter } from "next/navigation";
 
-// import { resetAuthCookies } from '../lib/actions';
 import MenuLink from "../navbar/MenuLink";
+import { resetAuthCookies } from "@/lib/actions";
 
 
 const LogoutButton: React.FC = () => {
     const router = useRouter();
 
     const submitLogout = async () => {
-        // resetAuthCookies();
+        resetAuthCookies();
 
         router.push('/')
     }

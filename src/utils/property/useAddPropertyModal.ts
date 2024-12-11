@@ -9,7 +9,10 @@ interface AddPropertyModalStore {
 
 const useAddPropertyModal = create<AddPropertyModalStore>((set)=>({
     isOpen: false,
-    open: () => set({ isOpen: true }),
+    open: () =>{
+        console.log('Opening modal'); // Debugging
+        set({ isOpen: true });
+    },
     close: () => set({ isOpen: false })
 }));
 

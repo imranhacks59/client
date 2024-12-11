@@ -11,6 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'airbnb': '#ff385c',
+        'airbnb-dark': '#d50027'
       },
     },
   },

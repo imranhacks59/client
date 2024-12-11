@@ -4,7 +4,7 @@ import Link from 'next/link';
 import SearchFilters from './SearchFilters';
 import UserNav from './UserNav';
 import AddPropertyButton from './AddPropertyButton';
-import getUserId from '@/utils/user/getUserId';
+import { getUserId } from '@/lib/actions';
 
 
 const Navbar = async () => {
